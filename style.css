@@ -316,3 +316,15 @@ body.light-mode {
 .weather-data .weather-left .current-weather.light-mode p {
     color: #222;
 }
+body.light-mode #city_input {
+    background-color: #e0e0e0; 
+    color: #222; 
+}
+
+body.light-mode #city_input::placeholder {
+    color: #555; 
+}
+body.light-mode .current-weather .deatils p,
+body.light-mode .current-weather .deatils h2 {
+    color: #222; 
+}
