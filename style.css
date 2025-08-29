@@ -290,3 +290,29 @@ hr{
         grid-template-columns: repeat(2, 1fr);
     }
 }
+.light-mode {
+    --bg-color1: #f5f7fa;
+    --bg-color2: #ffffff;
+    --aqi-1: #8bc34a;
+    --aqi-2: #ffeb3b;
+    --aqi-3: #ffc107;
+    --aqi-4: #ff9800;
+    --aqi-5: #f44336;
+}
+body.light-mode {
+    color: #222;
+    background-color: var(--bg-color1);
+}
+.header.light-mode {
+    background-color: var(--bg-color1);
+}
+.card.light-mode {
+    background: var(--bg-color2);
+    color: #222;
+}
+.card.light-mode p {
+    color: #666;
+}
+.weather-data .weather-left .current-weather.light-mode p {
+    color: #222;
+}
