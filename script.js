@@ -14,6 +14,22 @@ feelsVal = document.getElementById('feelsVal'),
 hourlyForecastCard = document.querySelector('.hourly-forecast'),
 aqiList =['Good', 'Fair', 'Moderate', 'Poor', 'Very Poor'];
 
+const themeToggle = document.getElementById('themeToggle');
+const root = document.body;
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    root.classList.add('light-mode');
+    themeToggle.textContent = '🌞';
+} else {
+    themeToggle.textContent = '🌙';
+}
+themeToggle.addEventListener('click', () => {
+    const isLight = root.classList.toggle('light-mode');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    themeToggle.textContent = isLight ? '🌞' : '🌙';
+});
+
 function getWeatherDetails(name, lat, lon, country, state){
     let FORECAST_API_URL =`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${api_key}`,
     WEATHER_API_URL =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`,
